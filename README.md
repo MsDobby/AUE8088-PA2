@@ -1,11 +1,11 @@
 # TODO : Object Detection
 
 - [x] Explain data augmentation​
-- [x] Draw anchors​ 
+- [x] Draw anchors​ at [debug.py](https://github.com/MsDobby/AUE8088-PA2/blob/main/debug.ipynb)
 - [x] Draw architecture​ 
 - [x] Training targets​ : how are targets returned and converted when calculating loss? 
-- [x] Qualitative evaluation​ at []()
-- [x] Train a better detector ​at [utils/loss.py]() and [data/hyp/hyp.new_params.yaml]()
+- [x] Qualitative evaluation​ at [debug.ipynb](https://github.com/MsDobby/AUE8088-PA2/blob/main/debug.ipynb)
+- [x] Train a better detector ​at [utils/loss.py](https://github.com/MsDobby/AUE8088-PA2/blob/main/utils/loss.py) and configs for the ablation study : [focal loss](https://github.com/MsDobby/AUE8088-PA2/blob/main/data/hyps/hyp.focalloss_cls.yaml#L13), [data augmentation](https://github.com/MsDobby/AUE8088-PA2/blob/main/data/hyps/hyp.no-augmentation.yaml)
 
 
 # Model Zoo
@@ -14,8 +14,8 @@
 |Baseline (Data Augment.)|0.306|0.144|
 |No Data Augment.|0.188|0.083|
 |No autoanchor|0.309|0.145|
-|Focal Loss (obj)|||
-|Focal Loss (cls)|||
+|Focal Loss (obj)|0.203|0.097|
+|Focal Loss (cls)|0.115|0.061|
 |Focal Loss (obj+cls)|N/A|N/A|
 
 The notation "N/A" indicates that the model does not need to be trained until the total epoch
