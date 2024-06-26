@@ -1283,7 +1283,7 @@ class LoadRGBTImagesAndLabels(LoadImagesAndLabels):
                 img = np.ascontiguousarray(img)
 
                 imgs[ii] = torch.from_numpy(img)
-            
+        else:     
             # Load image
             # hw0s: original shapes, hw1s: resized shapes
             imgs, hw0s, hw1s = self.load_image(index)
@@ -1353,7 +1353,7 @@ class LoadRGBTImagesAndLabels(LoadImagesAndLabels):
         # Drop occlusion level
         labels_out = labels_out[:, :-1]
         return imgs, labels_out, self.im_files[index], shapes, index
-
+        
     def load_image(self, i):
         """
         Loads an image by index, returning the image, its original dimensions, and resized dimensions.
