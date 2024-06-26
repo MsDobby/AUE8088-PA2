@@ -36,7 +36,6 @@ class K_fold_validation():
         self.k_cross_val = args.k
         self.k_index = args.idx 
         self.imgs_per_fold = math.floor(len(self.file_list) / self.k_cross_val)
-        print(self.imgs_per_fold)
 
         # Files
         self.train_list = []
@@ -50,7 +49,8 @@ class K_fold_validation():
         self.annot_imgs = []
         self.annot_annots = []
         self.annot_categories = {}
-        
+
+        assert self.k_index < 5 and self.k_index >=0, "k_index shold be greater than 0 and less than 5"
         for line, file_name in enumerate(self.file_list):
             if line >= self.imgs_per_fold * self.k_index and line <= self.imgs_per_fold * (self.k_index + 1):
                 self.val_list.append(file_name)
@@ -134,7 +134,8 @@ class K_fold_validation():
             "categories": self.annot_categories
         }
 
-        with open("KAIST_annotation.json", "w") as f:
+        self.json_name = f"KAIST_annotation_{self.k_index}_{self.k_cross_val}.json" 
+        with open(self.json_name, "w") as f:
             json.dump(self.annots, f)
 
 if __name__ == "__main__":
