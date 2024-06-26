@@ -2,9 +2,9 @@
 # TODO : Multispectral Pedestrian Detection
 - [x] Train baseline model
 - [x] Understand additional codes for this project
-- [x] Update loss function at [utils/loss.py]()
-- [x] Adjust anchor box. See this [yaml file]()
-- [ ] Modify data augmenttion at [utils/dataloaders.py]()
+- [x] Update loss function at [`utils/loss.py`](https://github.com/MsDobby/AUE8088-PA2/blob/project/utils/loss.py#L168)
+- [x] Adjust anchor box. See this [yaml file](https://github.com/MsDobby/AUE8088-PA2/blob/project/models/yolov5s_kaist-rgbt_more_anchor.yaml#L7)
+- [x] Modify data augmenttion at [`utils/dataloaders.py`](https://github.com/MsDobby/AUE8088-PA2/blob/project/utils/dataloaders.py#L1219) and [`self.load_mosaic`](https://github.com/MsDobby/AUE8088-PA2/blob/project/utils/dataloaders.py#L909)
 - [ ] Plot miss rate @ FPPI
 - [x] Further improvements 
 
